@@ -16,7 +16,13 @@
                 <input type="text" name="family_name" id="family_name"required>
                 <button type="submit">Add author</button>
     </form>
-  
+     
+    <h1>All Authors</h1>
+    <ul>
+        <% authors.forEach(author => { %>
+            <li>Name: <%= author.first_name %> <%= author.family_name %></li>
+        <% }) %>
+    </ul>
     
 </body>
 </html>
