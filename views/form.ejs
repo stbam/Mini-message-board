@@ -23,8 +23,13 @@
                         <span class="yellowbox"></span>
                     </div>
                     </div>
+                    <h2><%= title %></h2>
+                    <div class="view-container">
+
+                    
+                  
                    
-                    <p class="message-title"> <h2><%= title %></h2c></p>
+                    
                     
                     <% messages.forEach(function (message) { %>
                         <div class="message">
@@ -32,22 +37,25 @@
                         </div>
                     <% }); %>
                 </div>
-                
-                
-                <div class="submit-container">
+
+                    <div class="submit-container">
             
-                    <div class="inner-sub-cont">
-
-                    <label for="messageUser"></label>
-                    <input type="text" name="messageUser" id="messageUser" required placeholder="Author's name">
-                    <label for="messageText" ></label>
-                    <input type="text" id="messageText" name="messageText"required placeholder="Message:">
-                    <div class="img-div">
-                        <img  id="send-btn" src="/images/plane.svg" alt="Paper Plane Icon"  onclick="submitForm()">
+                        <div class="inner-sub-cont">
+    
+                        <label for="messageUser"></label>
+                        <input type="text" name="messageUser" id="messageUser" required placeholder="Author's name">
+                        <label for="messageText" ></label>
+                        <input type="text" id="messageText" name="messageText"required placeholder="Message:">
+                        <div class="img-div">
+                            <img  id="send-btn" src="/images/plane.svg" alt="Paper Plane Icon"  onclick="submitForm()">
+                        </div>
+                   
+    
                     </div>
-               
-
                 </div>
+                
+                
+                
                    
                 </div>
                <!-- <button type="submit">bob</button>--> 

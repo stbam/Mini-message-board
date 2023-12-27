@@ -4,15 +4,15 @@
 .nav{
     padding: 6px;
     background-color: #2f283b;
-    width: calc(100% + 40px); /* 100% width + 2 * 20px padding */
+    width: calc(100% + 30px); /* 100% width + 2 * 20px padding */
         margin-left: -20px; /* Compensate for the left padding of the parent */
         margin-right: -20px; /* Compensate for the right padding of the parent */
         margin-top: -20px; /* Compensate for the top padding of the parent */
         height: 30px;
         
 }
-.dots{
-    
+.dots{ 
+   
 }
 .redbox,.greenbox,.yellowbox{
     display: inline-block;

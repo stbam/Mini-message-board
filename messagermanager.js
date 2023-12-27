@@ -34,6 +34,85 @@ const messages = [
     text: "hello again!",
     user: "bro",
     added: formattedDate,
+  }, {
+    text: "Hi there!",
+    user: "Amando",
+    added: formattedDate,
+  },
+  {
+    text: "Hello World!",
+    user: "Charles",
+    added: formattedDate,
+  },
+  {
+    text: "hi!",
+    user: "KRe",
+    added: formattedDate,
+  },
+  {
+    text: "hello again!",
+    user: "bro",
+    added: formattedDate,
+  },
+  {
+    text: "Hi there!",
+    user: "Amando",
+    added: formattedDate,
+  },
+  {
+    text: "Hello World!",
+    user: "Charles",
+    added: formattedDate,
+  },
+  {
+    text: "hi!",
+    user: "KRe",
+    added: formattedDate,
+  },
+  {
+    text: "hello again!",
+    user: "bro",
+    added: formattedDate,
+  },
+  {
+    text: "Hi there!",
+    user: "Amando",
+    added: formattedDate,
+  },
+  {
+    text: "Hello World!",
+    user: "Charles",
+    added: formattedDate,
+  },
+  {
+    text: "hi!",
+    user: "KRe",
+    added: formattedDate,
+  },
+  {
+    text: "hello again!",
+    user: "bro",
+    added: formattedDate,
+  },
+  {
+    text: "Hi there!",
+    user: "Amando",
+    added: formattedDate,
+  },
+  {
+    text: "Hello World!",
+    user: "Charles",
+    added: formattedDate,
+  },
+  {
+    text: "hi!",
+    user: "KRe",
+    added: formattedDate,
+  },
+  {
+    text: "hello again!",
+    user: "bro",
+    added: formattedDate,
   },
   
 ];
