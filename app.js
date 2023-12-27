@@ -50,9 +50,10 @@ app.use('/users', usersRouter);
 
 app.get("/", async (req, res) => {
  // const authors = await fetchAuthors();
-  const messages = messageManager.getMessages();
+ // const messages = messageManager.getMessages();
 
-  res.render("index2", {messages });//authors, 
+  //res.render("index2", {messages });//authors, 
+  res.redirect("/index"); //redirects to index where the message app is
 });
 app.use("/index", indexRouter);
 app.use("/new", newRouter);
