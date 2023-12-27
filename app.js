@@ -1,6 +1,6 @@
 var createError = require("http-errors");
 var express = require("express");
-const mongoose = require("mongoose");
+//const mongoose = require("mongoose");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
@@ -21,14 +21,14 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-mongoose.set("strictQuery", false);
+/*mongoose.set("strictQuery", false);
 const mongoDB =
   "mongodb+srv://stbacmtd:Stru5932@cluster0.qoxy26k.mongodb.net/?retryWrites=true&w=majority";
 
 main().catch((err) => console.log(err));
 async function main() {
   await mongoose.connect(mongoDB);
-}
+}*/
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -65,7 +65,7 @@ app.get('/',async(req,res)=>{
 }
 )*/
 
-app.post("/addAuthor", async (req, res) => {
+/*app.post("/addAuthor", async (req, res) => {
   const { first_name, family_name, other_fields } = req.body;
 
   try {
@@ -81,7 +81,8 @@ app.post("/addAuthor", async (req, res) => {
     // Handle error, e.g., render a page with an error message
     res.render("error", { error });
   }
-});
+});*/
+
 app.post("/new", async (req, res) => {
   const { messageText, messageUser } = req.body;
   messageManager.addMessage({
@@ -93,7 +94,7 @@ app.post("/new", async (req, res) => {
   //res.redirect('/');
 });
 
-app.post("/deleteAuthor", async (req, res) => {
+/*app.post("/deleteAuthor", async (req, res) => {
   const itemId = req.body.itemId;
 
   try {
@@ -102,7 +103,7 @@ app.post("/deleteAuthor", async (req, res) => {
   } catch (error) {
     res.render("error", { error });
   }
-});
+});*/
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
