@@ -1,6 +1,6 @@
 var createError = require("http-errors");
 var express = require("express");
-//const mongoose = require("mongoose");
+const mongoose = require("mongoose");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
@@ -21,14 +21,14 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-/*mongoose.set("strictQuery", false);
+mongoose.set("strictQuery", false);
 const mongoDB =
   "mongodb+srv://stbacmtd:Stru5932@cluster0.qoxy26k.mongodb.net/?retryWrites=true&w=majority";
 
 main().catch((err) => console.log(err));
 async function main() {
   await mongoose.connect(mongoDB);
-}*/
+}
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
