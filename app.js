@@ -121,8 +121,8 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
-async function fetchAuthors() {
+/*async function fetchAuthors() {
   return await Author.find().exec();
-}
+}*/
 
 module.exports = app;
