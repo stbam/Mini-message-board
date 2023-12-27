@@ -84,10 +84,24 @@ app.post('/addAuthor', async (req, res) => {
     res.render('error', { error });
   }
 });
+
+app.post('/deleteAuthor', async (req, res) => {
+  const itemId = req.body.itemId;
+
+  try {
+    await Author.deleteOne({ _id: itemId });
+    res.redirect('/');
+  } catch (error) {
+    res.render('error', { error });
+  }
+});
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
 
 
 
