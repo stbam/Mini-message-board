@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+  <div class="message-container">
+      <!-- Your form and other content -->
+
+      <h1>All Authors</h1>
+      <ul>
+          <% authors.forEach(author => { %>
+              <li>
+                
+                  Name: <%= author.first_name %> <%= author.family_name %> 
+                  <form action="/deleteAuthor" method="post" style="display:inline;">
+                      <input type="hidden" name="itemId" value="<%= author._id %>">
+                      <button type="submit">Delete</button>
+                  </form>
+              </li>
+          <% }) %>
+      </ul>
+  </div>
+</body>
+
+</html>
