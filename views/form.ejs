@@ -14,8 +14,17 @@
             <div class="box">
             <form method="POST" action="/new">
                 <div class="messages">
+                    <div class="nav">
+                        <div class="dots">
+
+                        
+                        <span class="redbox"></span>
+                        <span class="greenbox"></span>
+                        <span class="yellowbox"></span>
+                    </div>
+                    </div>
                    
-                    <p class="message-title"><%= title %></p>
+                    <p class="message-title"> <h2><%= title %></h2c></p>
                     
                     <% messages.forEach(function (message) { %>
                         <div class="message">
@@ -34,7 +43,7 @@
                     <label for="messageText" ></label>
                     <input type="text" id="messageText" name="messageText"required placeholder="Message:">
                     <div class="img-div">
-                        <img  id="send-btn" src="/images/aeroplane.svg" alt="Paper Plane Icon"  onclick="submitForm()">
+                        <img  id="send-btn" src="/images/plane.svg" alt="Paper Plane Icon"  onclick="submitForm()">
                     </div>
                
 

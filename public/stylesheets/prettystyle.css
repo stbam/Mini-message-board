@@ -1,3 +1,35 @@
 .individ-message{
  height: 30px;
 }
+.nav{
+    padding: 6px;
+    background-color: #2f283b;
+    width: calc(100% + 40px); /* 100% width + 2 * 20px padding */
+        margin-left: -20px; /* Compensate for the left padding of the parent */
+        margin-right: -20px; /* Compensate for the right padding of the parent */
+        margin-top: -20px; /* Compensate for the top padding of the parent */
+        height: 30px;
+        
+}
+.dots{
+    
+}
+.redbox,.greenbox,.yellowbox{
+    display: inline-block;
+   border-radius: 30px;
+    width: 10px;
+    height: 10px;
+    
+}
+.redbox{
+    background-color: #ff605c;
+}
+.yellowbox{
+    background-color: #00ca4e;
+}
+.greenbox{
+  
+    background-color:#ffbd44;
+    
+    
+}
