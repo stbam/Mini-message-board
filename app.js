@@ -49,7 +49,7 @@ app.use('/users', usersRouter);
 //app.use('/secondindex',secondIndexRouter);
 
 app.get("/", async (req, res) => {
-  const authors = await fetchAuthors();
+ // const authors = await fetchAuthors();
   const messages = messageManager.getMessages();
 
   res.render("index2", { authors, messages });
