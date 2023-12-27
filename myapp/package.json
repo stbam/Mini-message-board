@@ -14,5 +14,8 @@
     "mongoose": "^8.0.3",
     "morgan": "~1.9.1",
     "nodemon": "^3.0.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.1.1"
   }
 }

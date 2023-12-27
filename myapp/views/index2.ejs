@@ -8,32 +8,23 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
+  <div class="message-container">
+      <!-- Your form and other content -->
 
-    <form action="/addAuthor" method="post">
-                <label for="first_name">First name:</label>
-                <input type="text" name="first_name" id="first_name" required>
-
-                <label for="family_name">Family name:</label>
-                <input type="text" name="family_name" id="family_name"required>
-                <button type="submit">Add author</button>
-    </form>
-     
-    <h1>All Authors</h1>
-    <!-- In your secondindex.ejs file -->
-<!-- In your index2.ejs file -->
-<ul>
-    <% authors.forEach(author => { %>
-      <li>
-        Name: <%= author.first_name %> <%= author.family_name %> 
-        <form action="/deleteAuthor" method="post" style="display:inline;">
-            <input type="hidden" name="itemId" value="<%= author._id %>">
-            <button type="submit">Delete</button>
-          </form>
-      </li>
-    <% }) %>
-  </ul>
-  
-  
-    
+      <h1>All Authors</h1>
+      <ul>
+          <% authors.forEach(author => { %>
+              <li>
+                
+                  Name: <%= author.first_name %> <%= author.family_name %> 
+                  <form action="/deleteAuthor" method="post" style="display:inline;">
+                      <input type="hidden" name="itemId" value="<%= author._id %>">
+                      <button type="submit">Delete</button>
+                  </form>
+              </li>
+          <% }) %>
+      </ul>
+  </div>
 </body>
+
 </html>

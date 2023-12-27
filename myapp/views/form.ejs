@@ -4,20 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/prettystyle.css' />
+   
     <title>Document</title>
 </head>
 <body>
     
-    <form method="POST" action="/new">
-        put your inputs and buttons in here!
-        <label for="messageText"></label>
-        <input type="text" id="messageText" name="messageText"required>
-        <br>
-        <label for="messageUser">Author's name</label>
-        <input type="text" name="messageUser" id="messageUser" required>
+            <div class="box">
+            <form method="POST" action="/new">
+                <div class="messages">
+                   
+                    <p class="message-title"><%= title %></p>
+                    
+                    <% messages.forEach(function (message) { %>
+                        <div class="message">
+                        <span class="message-text"><%= message.text %></span> - <span class="message-user"><%= message.user %></span> (Added:<span class="message-added"><%= message.added %></span>)
+                        </div>
+                    <% }); %>
+                </div>
+                
+                
+                <div class="submit-container">
+            
+                    <div class="inner-sub-cont">
 
-        <button type="submit">bob</button>
-     </form>
+                    <label for="messageUser"></label>
+                    <input type="text" name="messageUser" id="messageUser" required placeholder="Author's name">
+                    <label for="messageText" ></label>
+                    <input type="text" id="messageText" name="messageText"required placeholder="Message:">
+                    <div class="img-div">
+                        <img  id="send-btn" src="/images/aeroplane.svg" alt="Paper Plane Icon"  onclick="submitForm()">
+                    </div>
+               
 
+                </div>
+                   
+                </div>
+               <!-- <button type="submit">bob</button>--> 
+            </form>
+
+            
+        </div>
 </body>
+<script>
+   function submitForm() {
+    let messageUser = document.getElementById('messageUser');
+    let messageText = document.getElementById('messageText');
+
+    
+    // Check if both fields are not empty
+    if (messageUser.value.trim() !== '' && messageText.value.trim() !== '') {
+        document.forms[0].submit();
+    } else {
+        console.log('Please fill in both fields.');
+    }
+}
+</script>
 </html>

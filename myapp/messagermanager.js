@@ -1,31 +1,46 @@
 // messageManager.js
 
+const currentDate = new Date();
+const formattedDate = currentDate.toLocaleString('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+  hour12: true,
+});
+
+console.log(formattedDate);
+
+
 const messages = [
-    {
-      text: "Hi there!",
-      user: "Amando",
-      added: new Date()
-    },
-    {
-      text: "Hello World!",
-      user: "Charles",
-      added: new Date()
-    },
-    {
-      text: "hi!",
-      user: "KRe",
-      added: new Date()
-    },{
-      text: "hello again!",
-      user: "bro",
-      added: new Date()
-    }
-  ];
+  {
+    text: "Hi there!",
+    user: "Amando",
+    added: formattedDate,
+  },
+  {
+    text: "Hello World!",
+    user: "Charles",
+    added: formattedDate,
+  },
+  {
+    text: "hi!",
+    user: "KRe",
+    added: formattedDate,
+  },
+  {
+    text: "hello again!",
+    user: "bro",
+    added: formattedDate,
+  },
   
-  console.log(messages);
-  
-  module.exports = {
-    getMessages: () => messages,
-    addMessage: (message) => messages.push(message),
-  };
-  
+];
+
+console.log(messages);
+
+module.exports = {
+  getMessages: () => messages,
+  addMessage: (message) => messages.push(message),
+};
