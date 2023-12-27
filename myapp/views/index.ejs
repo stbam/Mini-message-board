@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Title</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <h3>Shrek mania let us begin</h3>
+    <h1>Here is messages array</h1>
+    <p><%=title %></p>
+
+    <h3><% messages.forEach(function(message){ %></h3>
+      <p><%=message.text%> - <%= message.user %> (Added:<%=message.added %>)</p>
+      <%}); %>
+
+  
+    
+   
+
   </body>
 </html>

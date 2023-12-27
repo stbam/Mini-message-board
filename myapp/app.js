@@ -6,9 +6,15 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const Author  = require('./models/author');
 const bodyParser = require('body-parser');
+const messageManager = require('./messagermanager');
 
+//const messages = [];
 
 port = 3000
+var indexRouter = require('./routes/index');
+var newRouter = require('./routes/new')
+
+
 
 /*var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -44,6 +50,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 /*app.use('/', indexRouter);
 app.use('/users', usersRouter);
 */
@@ -52,10 +59,13 @@ app.use('/users', usersRouter);
 app.get('/', async (req, res) => {
   
   const authors = await fetchAuthors();
-  
-  res.render('index2', {authors});
-});
+  const messages = messageManager.getMessages();
 
+  
+  res.render('index2', {authors,messages});
+});
+app.use('/index', indexRouter);
+app.use('/new',newRouter);
 /*
 
 app.get('/',async(req,res)=>{
@@ -84,6 +94,14 @@ app.post('/addAuthor', async (req, res) => {
     res.render('error', { error });
   }
 });
+app.post('/new', async (req, res) => {
+
+  const { messageText, messageUser } = req.body;
+  messageManager.addMessage({ text: messageText, user: messageUser, added: new Date() });
+
+  //res.redirect('/');
+});
+
 
 app.post('/deleteAuthor', async (req, res) => {
   const itemId = req.body.itemId;
