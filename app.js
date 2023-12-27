@@ -52,7 +52,7 @@ app.get("/", async (req, res) => {
  // const authors = await fetchAuthors();
   const messages = messageManager.getMessages();
 
-  res.render("index2", { authors, messages });
+  res.render("index2", {messages });//authors, 
 });
 app.use("/index", indexRouter);
 app.use("/new", newRouter);
