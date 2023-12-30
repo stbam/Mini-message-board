@@ -1,15 +1,21 @@
 html {
   background-color: #f0f0f0f0;
+  overflow: hidden; /*  It is commonly used to prevent scrollbars from 
+  appearing when the content exceeds the dimensions of the containing element.*/
 }
 body {
+  display: flex;
+
   display: grid;
   height: 100vh;
   place-items: center;
 }
 h2{
   margin-top:15px;
+  user-select: none;
 }
 .box {
+  display: flex;
   padding: 10px;
 }
 
@@ -24,21 +30,54 @@ form {
   display: flex;
   flex-direction: column;
  justify-content:space-between;
-  
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 10px;
-  min-width: 600px;
-  max-width: 600px;
+  width: 750px;
   padding: 20px;
-  height: 500px;
+  height: 800px;
   background-color: white;
 
 }
 .view-container{
+  margin-top: 40px;
   top: 0;
   bottom:0;
   overflow-y:scroll;
   overflow-x:hidden;
+}
+.message{
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+  margin-bottom: 10px;
+
+}
+.message:hover{
+  background-color: aliceblue;
+}
+.comment-text{
+  display: flex;
+  flex-basis: auto;
+word-break: break-all;/*solves the issue of text going out of the box and
+                      having to scrol horizontally to see it.*/
+  max-width: 100%;
+  overflow: auto;
+  font-size: 22px;
+  
+  
+}
+#author{
+  color: lightblue;
+  flex: 1; 
+}
+#commentwritten{
+  display: flex;
+
+}
+#comment{
+  color: black;
+  flex: 1;/* extra text will not push away elements on the right side of this element*/
+  
 }
 .submit-container {
   display: grid;

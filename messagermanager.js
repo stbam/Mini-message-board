@@ -1,11 +1,13 @@
-// messageManager.js
 const Message = require('./models/messagemodel');
-require('./app.js'); // Ensure the database connection is established
+const { DateTime } = require('luxon');
 
 const getMessages = async () => {
   try {
     const messages = await Message.find().lean();
-    return messages || [];
+    return messages.map(message => ({
+      ...message,
+      addednew: message.added ? DateTime.fromJSDate(message.added).toLocaleString({ month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true }) : null,
+    }));
   } catch (error) {
     console.error('Error fetching messages:', error);
     throw error;
@@ -14,7 +16,6 @@ const getMessages = async () => {
 
 
 const addMessage = async (messageData) => {
-  
   try {
     const newMessage = new Message(messageData);
     await newMessage.save();

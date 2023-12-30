@@ -22,8 +22,12 @@
                         <span class="greenbox"></span>
                         <span class="yellowbox"></span>
                     </div>
+                    <div class="title">
+                        <h2><%= title %></h2>
                     </div>
-                    <h2><%= title %></h2>
+                    
+                    </div>
+                
                     <div class="view-container">
 
                     
@@ -33,7 +37,8 @@
                     
                     <% messages.forEach(function (message) { %>
                         <div class="message">
-                        <span class="message-text"><%= message.text %></span> - <span class="message-user"><%= message.user %></span> (Added:<span class="message-added"><%= message.added %></span>)
+                        <span class="comment-text" id="author"> <span id="commentwritten"><%= message.text%></span>  <span class="comment-text" id="comment">:&nbsp &nbsp<%= message.user %> </span></span> <span id="message-added" ><%= message.addednew %> </span>
+                        
                         </div>
                     <% }); %>
                 </div>
@@ -43,9 +48,9 @@
                         <div class="inner-sub-cont">
     
                         <label for="messageUser"></label>
-                        <input type="text" name="messageUser" id="messageUser" required placeholder="Author's name">
+                        <input type="text" name="messageUser" id="messageUser" required placeholder= "Message:"  >
                         <label for="messageText" ></label>
-                        <input type="text" id="messageText" name="messageText"required placeholder="Message:">
+                        <input type="text" id="messageText" name="messageText"required placeholder="Author's name" maxlength="14">
                         <div class="img-div">
                             <img  id="send-btn" src="/images/plane.svg" alt="Paper Plane Icon"  onclick="submitForm()">
                         </div>
