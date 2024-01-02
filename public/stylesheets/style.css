@@ -46,33 +46,45 @@ form {
   overflow-x:hidden;
 }
 .message{
-  display: flex;
+  display: grid;
+
   justify-content: space-between;
   user-select: none;
   margin-bottom: 10px;
+  padding-right: 10px;
 
 }
 .message:hover{
   background-color: aliceblue;
 }
 .comment-text{
-  display: flex;
+  display: grid;
   flex-basis: auto;
 word-break: break-all;/*solves the issue of text going out of the box and
                       having to scrol horizontally to see it.*/
-  max-width: 100%;
+
   overflow: auto;
   font-size: 22px;
   
   
 }
+#message-added{/*grids to make the messages start and end on same line*/
+  display: grid;
+  grid-row-start: 1;
+  grid-row-end:1;
+  grid-column-start:2 ;
+  grid-column-end:3 ;
+}
 #author{
-  color: lightblue;
+  color: peru;
   flex: 1; 
 }
 #commentwritten{
-  display: flex;
-
+  display: grid;
+grid-row-start: 1;
+grid-row-end: 1;
+grid-column-start:1 ;
+grid-column-end: 1;
 }
 #comment{
   color: black;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-image: url('../images/dotsbackground.jpg')">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,7 +37,7 @@
                     
                     <% messages.forEach(function (message) { %>
                         <div class="message">
-                        <span class="comment-text" id="author"> <span id="commentwritten"><%= message.text%></span>  <span class="comment-text" id="comment">:&nbsp &nbsp<%= message.user %> </span></span> <span id="message-added" ><%= message.addednew %> </span>
+                        <span class="comment-text" id="author"> <span id="commentwritten"><%= message.text%>:</span>  <span class="comment-text" id="comment">&nbsp &nbsp<%= message.user %> </span></span> <span id="message-added" ><%= message.addednew %> </span>
                         
                         </div>
                     <% }); %>
