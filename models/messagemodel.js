@@ -12,7 +12,7 @@ const MessageSchema= new Schema({
     }
 })
 MessageSchema.virtual("addednew").get(function () {
-    return DateTime.fromJSDate(this.added).toLocaleString(DateTime.DATE_MED);
+    return DateTime.fromJSDate(this.added,{zone:UTC}).toLocaleString(DateTime.DATE_MED);
 });
 
 const Message= mongoose.model('Message',MessageSchema);
